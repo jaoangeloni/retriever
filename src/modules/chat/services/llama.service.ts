@@ -17,11 +17,12 @@ export class LlamaService {
             const response = await axios.post(
                 `${this.llamaUrl}/api/generate`,
                 {
-                    model: 'llama3',
+                    model: "llama3.1:8b",
                     prompt,
                     stream: true,
                 },
                 {
+                    timeout: 0,
                     responseType: 'stream',
                 }
             );

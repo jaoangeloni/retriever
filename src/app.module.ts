@@ -7,8 +7,8 @@ import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [DocumentModule, ChatModule,
     ConfigModule.forRoot({
-      isGlobal: true, // deixa disponível em toda a aplicação
-      envFilePath: '.env', // por padrão já pega .env
+      isGlobal: true,
+      envFilePath: '.env',
     }),],
 })
 export class AppModule { }
